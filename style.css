@@ -21,21 +21,23 @@ img.logo {
 }
 
 #section--0 {
-  margin-left: 165px;
-  margin-right: 165px;
-  margin-top: 23px;
-  margin-bottom: 132px;
+  padding-top: 23px;
+  padding-bottom: 132px;
+  background: rgba(255, 255, 255, 1);
 }
 .container {
   max-width: 1110px;
   margin-right: auto;
   margin-left: auto;
 }
+
+/* Navbar styling */
 .navbar {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
+
 .nav--leftcontent {
   display: flex;
   align-items: center;
@@ -45,6 +47,7 @@ img.logo {
 }
 .navlink {
   color: #69707d;
+
   align-self: center;
   font-size: 15px;
   line-height: 26px;
@@ -69,8 +72,10 @@ div.line {
   color: #000;
   border: solid 1px #e4e9f2;
   margin-top: 34px;
+  background: #e4e9f2;
 }
 
+/* content styling */
 .content {
   max-width: 1015px;
   height: 565px;
@@ -78,9 +83,11 @@ div.line {
   margin-top: 90px;
 }
 
+/* leftcontent styling */
 .leftcontent--image {
   max-height: 565px;
   max-width: 445px;
+  margin-right: 125px;
 }
 
 .thumbnail--images {
@@ -107,4 +114,196 @@ div.line {
 }
 .modal-image.last-image {
   margin-right: 0;
+}
+
+/* rightcontent div styling */
+.rightcontent--desc {
+  max-width: 445px;
+  height: 426px;
+  margin-top: 62px;
+}
+
+h6.sneaker--label {
+  color: #ff7e1b;
+  font-size: 13px;
+  line-height: 13px;
+  font-weight: bold;
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  margin-bottom: 27px;
+}
+
+h2.sneaker--edition {
+  color: #1d2026;
+  font-size: 44px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 48px;
+  margin-bottom: 32px;
+}
+
+p.description {
+  color: #69707d;
+  font-size: 16px;
+  font-weight: normal;
+  font-style: normal;
+  line-height: 26px;
+  margin-bottom: 24px;
+}
+
+.price--content {
+  margin-bottom: 32px;
+}
+
+p.main-price {
+  color: #1d2026;
+  font-size: 28px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 28px;
+  margin-right: 16px;
+  margin-bottom: 10px;
+}
+
+span.discount {
+  text-align: center;
+  margin-bottom: 1px;
+  max-width: 51px;
+  height: 27px;
+  background: #ffeee2;
+
+  border-radius: 6px;
+  color: #ff7e1b;
+  font-size: 16px;
+  font-weight: bold;
+  font-style: normal;
+  line-height: 16px;
+  padding-top: 7px;
+  padding-bottom: 4px;
+  padding-right: 8px;
+  padding-left: 8px;
+  margin-left: 16px;
+}
+
+p.old--price {
+  color: #b6bcc8;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  text-decoration-line: line-through;
+}
+
+/* button styling */
+.btn--counter {
+  text-align: center;
+  background: #f6f8fd;
+  border: none;
+  border-radius: 10px;
+  width: 157px;
+  height: 56px;
+  cursor: pointer;
+}
+
+.no--pairs {
+  margin-left: 45.5px;
+  margin-right: 45.5px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+}
+
+.btn--addtocart {
+  text-align: center;
+  color: #f6f8fd;
+  text-decoration: none;
+  border: none;
+  border-radius: 10px;
+  background: #ff7e1b;
+  width: 272px;
+  height: 56px;
+  margin-left: 12px;
+}
+
+.btn--addtocart img {
+  align-self: center;
+  margin-right: 15px;
+}
+
+.btn--addtocart span {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+  cursor: pointer;
+}
+
+/* active basket empty styling */
+.cart--modal {
+  position: absolute;
+  width: 360px;
+  height: 256px;
+  left: 991px;
+  top: 94px;
+  background: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0px 20px 50px -20px rgba(29, 32, 38, 0.5);
+}
+
+h1.cartheading {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 16px;
+
+  color: #1d2026;
+  padding-top: 24px;
+  padding-left: 24px;
+  margin-bottom: 27px;
+}
+
+div.cart-divider {
+  max-width: 360px;
+
+  margin-bottom: 77px;
+  border: solid 1px #e4e9f2;
+}
+
+p.empty--cart {
+  color: #69707d;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 16px;
+  line-height: 26px;
+  text-align: center;
+}
+
+/* hover states */
+
+/* classes to be used in active cart and js */
+.hidden {
+  display: none;
+}
+
+.overlay {
+  opacity: 0.75;
+}
+
+/* Hover states */
+.navlink:hover {
+  color: #1d2026;
+  border-bottom: solid 4px #ff7e1b;
+  padding-bottom: 50px;
+}
+
+.orange--line {
+  position: relative;
+  top: 51px;
+  right: 94px;
+
+  width: 58px;
+  border: solid 4px #ff7e1b;
+  margin-top: 41px;
 }
