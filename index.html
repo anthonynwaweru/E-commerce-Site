@@ -11,13 +11,18 @@
       rel="stylesheet"
     />
     <link rel="stylesheet" href="style.css" />
-    <script defer src="script.js"></script>
 
+    <script src="https://kit.fontawesome.com/52223a01d3.js" crossorigin="anonymous"></script>
+    
+    <script defer src="script.js"></script>
+    
     <title>Sneakers | Kicks Collection</title>
   </head>
   <body>
+    <main>
     <section id="section--0">
       <div class="container navbar">
+
         <div class="nav--leftcontent">
           <div>
             <img class="logo" src="images/logo.svg" alt="" />
@@ -37,14 +42,34 @@
           </div>
         </div>
         <div class="nav--rightcontent">
+          <!-- cart item number modal -->
+          <div class="itemCartBtn hidden">3</div>
           <a href="#" class="navcart">
-            <img src="images/cart.svg" alt="" />
+            <img src="images/icon-cart.svg" alt="" />
           </a>
           <a href="#" class="nav-avatar">
-            <img src="images/avatar.svg" alt="" />
+            <!-- <img src="images/avatar.svg" alt="" /> -->
           </a>
         </div>
+        <!-- cart modal div -->
+         <div class="empty--cart cart--modal hidden">
+        <h1 class="cartheading">Cart</h1><span class="closeModal">&times;</span>
+        <div class="container cart-divider"></div>
+        <p class="empty--cart">Your cart is empty.</p>
+      </div>
+         <div class="filled-cart  hidden">
+        <!-- <h1 class="cartheading">Cart</h1><span class="closeModal">&times;</span>
+        <div class="container cart-divider"></div>
+        <div class="cart-filled"><div><img class="modal-image" src="images/image-product-1-thumbnail.jpg" alt=""></div>
+          <div class="desc-cart"><p>Fall Limited sneakers</p>
+            <p>$125.00 x 3 <span><b>$325.00</b></span></p>
+          </div>
+          <div class="delete"><img src="images/delete.svg" alt=""></div>
+        </div>
         
+          <button class="checkout--btn" type="button">Checkout</button>
+         -->
+      </div>
       </div>
 
       <div class="container line"></div>
@@ -55,9 +80,9 @@
             <img class="main-image" src="images/image-product-1.jpg" alt="" />
           </div>
           <div class="thumbnail--images">
-            <a href="#">
+            <a href="#" class="">
               <img
-                class="modal-image focused"
+                class="modal-image active"
                 src="images/image-product-1-thumbnail.jpg"
                 alt=""
               />
@@ -104,11 +129,60 @@
           </div>
         </div>
       </div>
+     
+     
     </section>
-    <div class="cart--modal hidden">
-      <h1 class="cartheading">Cart</h1>
-      <div class="container cart-divider"></div>
-      <p class="empty--cart">Your cart is empty.</p>
-    </div>
+
+    <section class="my-modal">
+      <div class="modal-container">
+        <div id="mymodal">
+          
+          <div class="modal--content">
+            <span class="close-modal">&times;</span>
+
+            <!-- images in the modal -->
+            <div class="photo-slides showImage">
+              <img src="images/image-product-1.jpg" alt="">
+            </div>
+
+            <div class="photo-slides">
+              <img src="images/image-product-2.jpg" alt="">
+            </div>
+
+            <div class="photo-slides">
+              <img src="images/image-product-3.jpg" alt="">
+            </div>
+
+            <div class="photo-slides">
+              <img src="images/image-product-4.jpg" alt="">
+            </div>
+
+            <!-- modal control cursors -->
+            <a  class="previous"><i class="fas fa-angle-left"></i></a>
+            <a  class="next"><i class="fas fa-angle-right"></i></a>
+
+            <!-- thumbnail photos control -->
+            <div class="flex-wrap">
+              <div >
+              <img class="thumbnails" src="images/image-product-1-thumbnail.jpg" alt="" class="thumbpic">
+              </div>
+  
+              <div >
+              <img class="thumbnails" src="images/image-product-2-thumbnail.jpg" alt="" class="thumbpic">
+              </div>
+  
+              <div >
+              <img class="thumbnails" src="images/image-product-3-thumbnail.jpg" alt="" class="thumbpic">
+              </div>
+  
+              <div >
+              <img class="thumbnails" src="images/image-product-4-thumbnail.jpg" alt="" class="thumbpic">
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
   </body>
 </html>
