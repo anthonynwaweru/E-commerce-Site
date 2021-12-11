@@ -298,6 +298,11 @@ p.empty--cart {
   padding-bottom: 50px;
 }
 
+.nav-avatar:hover {
+  border: solid 2px #ff7e1b;
+  border-radius: 50%;
+}
+
 .orange--line {
   position: relative;
   top: 51px;
