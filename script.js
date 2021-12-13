@@ -10,8 +10,8 @@ const cartModal = document.querySelector('.cart--modal');
 const filledCart = document.querySelector('.filled-cart');
 const closeModals = document.querySelectorAll('.closeModal');
 
-let photoSlides = document.querySelectorAll('.photo-slides');
-let photoThumbs = document.querySelectorAll('.thumbnails');
+const photoSlides = document.querySelectorAll('.photo-slides');
+const photoThumbs = document.querySelectorAll('.thumbnails');
 
 console.log(currentPairs);
 
@@ -23,6 +23,10 @@ const closeModal = function () {
   cartModal.classList.add('hidden');
   filledCart.classList.add('hidden');
 };
+
+// updating cart status
+
+let cartEmpty = true;
 
 // Changing active states on clicked thumbnail images
 const toggle = function (img) {
