@@ -6,7 +6,7 @@ const sectionHero = document.querySelector('#section--0');
 const minus = document.querySelector('.minus');
 const currentPairs = Number(document.querySelector('.no--pairs').textContent);
 const plus = document.querySelector('.plus');
-const cartModal = document.querySelector('.cart--modal');
+const emptyCartModal = document.querySelector('.empty--cart');
 const filledCart = document.querySelector('.filled-cart');
 const closeModals = document.querySelectorAll('.closeModal');
 
@@ -15,113 +15,7 @@ const photoThumbs = document.querySelectorAll('.thumbnails');
 
 console.log(currentPairs);
 
-//Nav-cart modal opening and closing
-const showCartModal = function (modalName) {
-  modalName.classList.remove('hidden');
-};
-const closeModal = function () {
-  cartModal.classList.add('hidden');
-  filledCart.classList.add('hidden');
-};
-
-// updating cart status
-
-let cartEmpty = true;
-
-// Changing active states on clicked thumbnail images
-const toggle = function (img) {
-  const currentActive = document.querySelector('.active');
-  currentActive.classList.remove('active');
-  img.classList.add('active');
-};
-
-// Adding and substracting number of shoes
-let count;
-
-const updateCount = function (count) {
-  document.querySelector('.no--pairs').innerHTML = count;
-};
-
-minus.addEventListener('click', function (e) {
-  count = Number(document.querySelector('.no--pairs').innerHTML);
-  //   count = currentPairs;
-  if (count >= 1) {
-    count--;
-  } else if ((count = 0)) {
-    count = count;
-  } else {
-    return;
-  }
-
-  updateCount(count);
-  return count;
-});
-
-plus.addEventListener('click', function (e) {
-  count = Number(document.querySelector('.no--pairs').innerHTML);
-  //   count = currentPairs;
-  count++;
-
-  updateCount(count);
-  return count;
-});
-
-let price = 125.0;
-document
-  .querySelector('.btn--addtocart')
-  .addEventListener('click', function (e) {
-    if (count) {
-      document.querySelector('.empty--cart').classList.add('hidden');
-      console.log(count);
-      document.querySelector('.itemCartBtn').innerHTML = count;
-      document.querySelector('.itemCartBtn').classList.remove('hidden');
-      document.querySelector(
-        '.filled-cart'
-      ).innerHTML = `<h1 class="cartheading">Cart</h1><span class="closeModal">&times;</span>
-      <div class="container cart-divider"></div>
-      <div class="cart-filled"><div><img class="modal-image" src="images/image-product-1-thumbnail.jpg" alt=""></div>
-      <div class="desc-cart"><p>Fall Limited sneakers</p>
-      <p>$${price.toFixed(2)} x ${count} <span><b>$${(price * count).toFixed(
-        2
-      )}</b></span></p>
-        </div>
-        <div class="delete"><img src="images/delete.svg" alt=""></div>
-        </div>
-        
-        <button class="checkout--btn" type="button">Checkout</button>`;
-
-      // filledCart.classList.add('hidden');
-      document
-        .querySelector('.closeModal')
-        .addEventListener('click', function () {
-          console.log('hi');
-          closeModal();
-        });
-    } else if (!count) {
-      document.querySelector('.empty--cart').classList.remove('hidden');
-    }
-  });
-
-document.querySelector('.navcart').addEventListener('click', function (e) {
-  console.log(e.target);
-  if (count) {
-    showCartModal(filledCart);
-  } else {
-    showCartModal(cartModal);
-  }
-});
-
-for (let i = 0; i < closeModals.length; i++) {
-  closeModals[i].addEventListener('click', closeModal);
-}
-
-document.body.addEventListener('keydown', function (e) {
-  if (e.key === 'Escape') {
-    closeModal();
-  }
-});
-
-// Opening modal
+// Opening image modal
 const openModal = function () {
   document.querySelector('.my-modal').style.display = 'block';
 };
@@ -181,11 +75,89 @@ for (let i = 0; i < photoThumbs.length; i++) {
     currSlide(i + 1);
   });
 }
-// snext and previous
+// next and previous sliders
 
 document.querySelector('.previous').addEventListener('click', function () {
   slidePlus(-1);
 });
 document.querySelector('.next').addEventListener('click', function () {
   slidePlus(1);
+});
+
+// updating counter
+let count = 0;
+
+const updateCount = function (count) {
+  document.querySelector('.no--pairs').innerHTML = count;
+};
+
+//minus
+minus.addEventListener('click', function () {
+  if (count > 0) {
+    count--;
+    updateCount(count);
+  } else if (count === 0) {
+    return;
+  }
+});
+//add
+plus.addEventListener('click', function () {
+  count++;
+  updateCount(count);
+});
+
+// adding items to cart and Setting cart state
+let cartState;
+
+document
+  .querySelector('.btn--addtocart')
+  .addEventListener('click', function () {
+    let totalAmount;
+    let price = 125.0;
+    if (count === 0) {
+      emptyCartModal.classList.remove('hidden');
+      setTimeout(function () {
+        emptyCartModal.classList.add('hidden');
+      }, 2000);
+    }
+    if (count > 0) {
+      totalAmount = price * count;
+      document.querySelector(
+        '.filled-cart'
+      ).innerHTML = `<h1 class="cartheading">Cart</h1><span class="closeModal">&times;</span>
+      <div class="container cart-divider"></div>
+      <div class="cart-filled"><div><img class="modal-image" src="images/image-product-1-thumbnail.jpg" alt=""></div>
+        <div class="desc-cart"><p>Fall Limited sneakers</p>
+          <p>$${price.toFixed(2)} x ${count} <span><b>${totalAmount.toFixed(
+        2
+      )}</b></span></p>
+        </div>
+        <div class="delete"><img src="images/delete.svg" alt=""></div>
+      </div>
+      
+        <button class="checkout--btn" type="button">Checkout</button>`;
+      document.querySelector('.itemCartBtn').innerHTML = count;
+      document.querySelector('.itemCartBtn').classList.remove('hidden');
+    }
+  });
+
+document.querySelector('.navcart').addEventListener('click', function () {
+  console.log(count);
+  if (count === 0) {
+    cartState = false;
+    if (!cartState) {
+      emptyCartModal.classList.remove('hidden');
+      setTimeout(function () {
+        emptyCartModal.classList.add('hidden');
+      }, 3000);
+    }
+  }
+  if (count > 0) {
+    cartState = true;
+    if (cartState) filledCart.classList.remove('hidden');
+  }
+});
+
+document.querySelector('.closeModal').addEventListener('click', function () {
+  filledCart.classList.toggle('hidden');
 });
