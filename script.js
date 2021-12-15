@@ -13,7 +13,7 @@ const closeModals = document.querySelectorAll('.closeModal');
 const photoSlides = document.querySelectorAll('.photo-slides');
 const photoThumbs = document.querySelectorAll('.thumbnails');
 
-console.log(currentPairs);
+// console.log(currentPairs);
 
 // Opening image modal
 const openModal = function () {
@@ -24,6 +24,11 @@ const openModal = function () {
 const modalClose = function () {
   document.querySelector('.my-modal').style.display = 'none';
 };
+document.body.addEventListener('keydown', function (e) {
+  if (e.key === 'Escape') {
+    document.querySelector('.my-modal').style.display = 'none';
+  }
+});
 
 document.querySelector('.close-modal').addEventListener('click', modalClose);
 
@@ -132,7 +137,7 @@ document
         2
       )}</b></span></p>
         </div>
-        <div class="delete"><img src="images/delete.svg" alt=""></div>
+        <div ><img class="delete" src="images/delete.svg" alt=""></div>
       </div>
       
         <button class="checkout--btn" type="button">Checkout</button>`;
@@ -147,9 +152,14 @@ document.querySelector('.navcart').addEventListener('click', function () {
     cartState = false;
     if (!cartState) {
       emptyCartModal.classList.remove('hidden');
-      setTimeout(function () {
-        emptyCartModal.classList.add('hidden');
-      }, 3000);
+      emptyCartModal.addEventListener('click', function (e) {
+        if (e.target.classList.contains('closeModal')) {
+          emptyCartModal.classList.add('hidden');
+        }
+      });
+      // setTimeout(function () {
+      //   emptyCartModal.classList.add('hidden');
+      // }, 3000);
     }
   }
   if (count > 0) {
@@ -158,6 +168,30 @@ document.querySelector('.navcart').addEventListener('click', function () {
   }
 });
 
-document.querySelector('.closeModal').addEventListener('click', function () {
-  filledCart.classList.toggle('hidden');
+document.querySelector('.filled-cart').addEventListener('click', function (e) {
+  if (e.target.classList.contains('closeModal')) {
+    filledCart.classList.add('hidden');
+  }
+  if (e.target.classList.contains('delete')) {
+    count = 0;
+    updateCount(count);
+    document.querySelector('.itemCartBtn').classList.add('hidden');
+    filledCart.innerHTML = `<h1 class="cartheading">Cart</h1><span class="closeModal">&times;</span>
+    <div class="container cart-divider"></div>
+    <p class="empty--cart">Item removed from the cart.</p>`;
+    setTimeout(function () {
+      filledCart.classList.add('hidden');
+    }, 3000);
+  }
+  if (e.target.classList.contains('checkout--btn')) {
+    count = 0;
+    updateCount(count);
+    document.querySelector('.itemCartBtn').classList.add('hidden');
+    filledCart.innerHTML = `<h1 class="cartheading" style="color: #ff7e1b;">Order Placed</h1><span class="closeModal">&times;</span>
+    <div class="container cart-divider"></div>
+    <p class="empty--cart" style="color: #ff7e1b;">Thank you for shopping at Sneakers.</p>`;
+    setTimeout(function () {
+      filledCart.classList.add('hidden');
+    }, 3000);
+  }
 });
