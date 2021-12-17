@@ -249,10 +249,13 @@ document.querySelector('.filled-cart').addEventListener('click', function (e) {
 
 document.querySelector('.menu').addEventListener('click', function () {
   document.querySelector('.hamburger--menu').classList.remove('hidden');
+  // document.querySelector('.overlay').classList.remove('hidden');
+  document.querySelector('.overlay').style.display = 'block';
 });
 
 document.querySelector('.menu-star').addEventListener('click', function () {
   document.querySelector('.hamburger--menu').classList.add('hidden');
+  document.querySelector('.overlay').style.display = 'none';
 });
 
 // mobile slides

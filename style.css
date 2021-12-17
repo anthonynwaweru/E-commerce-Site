@@ -140,7 +140,7 @@ div.line {
   margin-top: 62px;
 }
 
-h6.sneaker--label {
+h1.sneaker--label {
   color: #ff7e1b;
   font-size: 13px;
   line-height: 13px;
@@ -567,6 +567,10 @@ span.close-modal {
 
 .footer p.foot-sec {
   margin-right: 16px;
+}
+
+.overlay {
+  display: none;
 }
 /* @media screen responsive styling */
 
