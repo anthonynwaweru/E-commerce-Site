@@ -173,4 +173,112 @@
     margin-right: 16px;
     cursor: pointer;
   }
+
+  .hamburger--menu {
+    display: flex;
+    background: #ffffff;
+    position: absolute;
+    width: 250px;
+    height: 900px;
+    left: 0px;
+    top: 0px;
+  }
+  .hidden {
+    display: none;
+  }
+
+  .overlay {
+    display: none;
+    position: fixed;
+    width: 375px;
+    height: 900px;
+    left: 0px;
+    top: 0px;
+    background: #000000;
+    opacity: 0.75;
+    z-index: 0;
+  }
+
+  .menu-star {
+    position: absolute;
+    font-weight: bold;
+    font-size: 30px;
+    left: 25.28px;
+    top: 14px;
+    cursor: pointer;
+    color: #69707d;
+  }
+  .menu-nav {
+    /* position: absolute; */
+    padding-top: 92px;
+    padding-bottom: 598px;
+    padding-left: 25px;
+    width: 95px;
+    height: 210px;
+    left: 25px;
+    top: 92px;
+  }
+
+  ul.hambug {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  ul.hambug li a {
+    list-style: none;
+    text-decoration: none;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 18px;
+    line-height: 26px;
+    color: #1d2026;
+    cursor: pointer;
+  }
+
+  ul.hambug li {
+    margin-bottom: 20px;
+  }
+
+  ul.hambug li a:hover {
+    opacity: 0.7;
+  }
+  .menu-star:hover {
+    color: #ff7e1b;
+  }
+
+  .mobile-wrap {
+    display: block;
+  }
+
+  .previous-mobile {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    color: #f6f8fd;
+    width: 40px;
+    height: 40px;
+    left: 26px;
+    top: 210px;
+  }
+
+  .next-mobile {
+    display: block;
+    position: absolute;
+    cursor: pointer;
+    color: #f6f8fd;
+    width: 40px;
+    height: 40px;
+    left: 348px;
+    top: 210px;
+  }
+
+  .next-mobile:hover,
+  .previous-mobile:hover {
+    color: #ff7e1b;
+  }
+
+  .footer-container {
+    display: none;
+  }
 }

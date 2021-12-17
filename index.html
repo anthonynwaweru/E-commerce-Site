@@ -52,7 +52,7 @@
         </div>
         <div class="nav--rightcontent">
           <!-- cart item number modal -->
-          <div class="itemCartBtn hidden"></div>
+          <div class="itemCartBtn hidden">0</div>
           <a href="#" class="navcart">
             <img src="images/icon-cart.svg" alt="" />
           </a>
@@ -85,9 +85,12 @@
 
       <div class="container content">
         <div class="leftcontent--image">
-          <div>
-            <img class="main-image" src="images/image-product-1.jpg" alt="" />
+          <a  class="previous-mobile"><i class="fas fa-angle-left"></i></a>
+          <a  class="next-mobile"><i class="fas fa-angle-right"></i></a>
+          <div class="main-slides">
+            <img class="main-image" id="mainPhoto" src="images/image-product-1.jpg" alt="" />
           </div>
+          
           <div class="thumbnail--images">
             <a href="#" class="">
               <img
@@ -132,13 +135,26 @@
             <p class="old--price">$250.00</p>
           </div>
           <div class="addto--cartbtn">
-            <button class="btn--counter" type="button"><img class="minus" src="images/icon-minus.svg" alt=""><span class="no--pairs">0</span><img class="plus" src="images/icon-plus.svg" alt=""></button>
+            <button class="btn--counter" type="button"><img class="minus hidden" src="images/icon-minus.svg" alt=""><span class="no--pairs">1</span><img class="plus" src="images/icon-plus.svg" alt=""></button>
             <button class="btn--addtocart" type="button"><img class="cart"src="images/Shape.svg" alt=""><span>Add to cart</span></button>
           </div>
           </div>
         </div>
       </div>
      
+
+        <div class="hamburger--menu hidden ">
+          <span class="menu-star">&times;</span>
+          <div class="menu-nav">
+            <ul class="hambug">
+              <li><a href="#">Collections</a></li>
+              <li><a href="#">Men</a></li>
+              <li><a href="#">Women</a></li>
+              <li><a href="#">About</a></li>
+              <li><a href="#">Contact</a></li>
+            </ul>
+          </div>
+      </div>
      
     </section>
 
@@ -188,10 +204,19 @@
               <img class="thumbnails" src="images/image-product-4-thumbnail.jpg" alt="" class="thumbpic">
               </div>
             </div>
+
+
+            
           </div>
         </div>
       </div>
     </section>
+    <div class="container footer-container">
+      <footer class="footer ">
+        <p class="foot-sec">Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentors</a></p>
+        <p>Coded by : <a href="https://www.linkedin.com/in/anthony-waweru/" target="_blank">Anthony Waweru</a></p>
+      </footer>
+    </div>
   </main>
   </body>
 </html>

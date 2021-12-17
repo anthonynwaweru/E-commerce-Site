@@ -531,6 +531,43 @@ span.close-modal {
   color: #ff7e1b;
 }
 
+.hamburger--menu {
+  display: none;
+}
+
+.previous-mobile,
+.next-mobile {
+  display: none;
+}
+
+.footer {
+  display: flex;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 80px;
+  /* position: absolute; */
+  /* bottom: -247px;
+  left: 755px; */
+}
+.footer p {
+  color: #69707d;
+}
+.footer a {
+  list-style: none;
+  text-decoration: none;
+  color: #1d2026;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.footer a:hover {
+  color: #ff7e1b;
+}
+
+.footer p.foot-sec {
+  margin-right: 16px;
+}
 /* @media screen responsive styling */
 
 /* @media screen and (max-width: 375px) {
