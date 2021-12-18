@@ -251,11 +251,17 @@ document.querySelector('.menu').addEventListener('click', function () {
   document.querySelector('.hamburger--menu').classList.remove('hidden');
   // document.querySelector('.overlay').classList.remove('hidden');
   document.querySelector('.overlay').style.display = 'block';
+  document.getElementById('section--0').style.marginTop = '0px';
+  document.getElementById('section--0').style.marginBottom = '0px';
+  document.getElementById('section--0').style.overflow = 'hidden';
 });
 
 document.querySelector('.menu-star').addEventListener('click', function () {
   document.querySelector('.hamburger--menu').classList.add('hidden');
   document.querySelector('.overlay').style.display = 'none';
+  document.getElementById('section--0').style.marginTop = '19px';
+  document.getElementById('section--0').style.marginBottom = '88px';
+  document.getElementById('section--0').style.overflow = 'scroll';
 });
 
 // mobile slides
