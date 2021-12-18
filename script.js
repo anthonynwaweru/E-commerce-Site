@@ -226,6 +226,7 @@ document.querySelector('.filled-cart').addEventListener('click', function (e) {
     <p class="empty--cart">Item removed from the cart.</p>`;
     setTimeout(function () {
       document.querySelector('.itemCartBtn').textContent = '0';
+      totalAmount = 0;
       filledCart.classList.add('hidden');
     }, 3000);
   }
@@ -239,6 +240,7 @@ document.querySelector('.filled-cart').addEventListener('click', function (e) {
     <p class="empty--cart" style="color: #ff7e1b;">Thank you for shopping at Sneakers.</p>`;
     setTimeout(function () {
       document.querySelector('.itemCartBtn').textContent = '0';
+      totalAmount = 0;
       filledCart.classList.add('hidden');
       // location.reload();
     }, 3000);
