@@ -219,6 +219,7 @@ document.querySelector('.filled-cart').addEventListener('click', function (e) {
   if (e.target.classList.contains('delete')) {
     count = 1;
     shoesBought = 0;
+    totalAmount = 0;
     updateCount(count);
     document.querySelector('.itemCartBtn').classList.add('hidden');
     filledCart.innerHTML = `<h1 class="cartheading">Cart</h1><span class="closeModal">&times;</span>
@@ -226,13 +227,14 @@ document.querySelector('.filled-cart').addEventListener('click', function (e) {
     <p class="empty--cart">Item removed from the cart.</p>`;
     setTimeout(function () {
       document.querySelector('.itemCartBtn').textContent = '0';
-      totalAmount = 0;
+
       filledCart.classList.add('hidden');
     }, 3000);
   }
   if (e.target.classList.contains('checkout--btn')) {
     count = 1;
     shoesBought = 0;
+    totalAmount = 0;
     updateCount(count);
     document.querySelector('.itemCartBtn').classList.add('hidden');
     filledCart.innerHTML = `<h1 class="cartheading" style="color: #ff7e1b;">Order Placed</h1><span class="closeModal">&times;</span>
@@ -240,7 +242,7 @@ document.querySelector('.filled-cart').addEventListener('click', function (e) {
     <p class="empty--cart" style="color: #ff7e1b;">Thank you for shopping at Sneakers.</p>`;
     setTimeout(function () {
       document.querySelector('.itemCartBtn').textContent = '0';
-      totalAmount = 0;
+
       filledCart.classList.add('hidden');
       // location.reload();
     }, 3000);
