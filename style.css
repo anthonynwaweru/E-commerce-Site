@@ -359,7 +359,8 @@ span.closeModal {
   display: none;
 }
 .nav-avatar:hover {
-  border: 2px solid #ff7e1b;
+  border: solid #ff7e1b;
+  background-position: center;
 }
 
 .modal-image:hover {

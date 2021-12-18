@@ -263,5 +263,3 @@ document.querySelector('.menu-star').addEventListener('click', function () {
   document.getElementById('section--0').style.marginBottom = '88px';
   document.getElementById('section--0').style.overflow = 'scroll';
 });
-
-// mobile slides
