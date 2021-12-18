@@ -284,3 +284,24 @@
     display: none;
   }
 }
+
+@media screen and (max-width: 1200px) {
+  .addto--cartbtn {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .addto--cartbtn button {
+    width: 327px;
+    height: 56px;
+  }
+
+  .btn--addtocart {
+    margin-left: 0;
+    margin-top: 16px;
+  }
+
+  /* .container {
+    margin-left: 10px;
+  } */
+}
