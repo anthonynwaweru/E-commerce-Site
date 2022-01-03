@@ -176,9 +176,9 @@ document
       <div class="container cart-divider"></div>
       <div class="cart-filled"><div><img class="modal-image" src="images/image-product-1-thumbnail.jpg" alt=""></div>
         <div class="desc-cart"><p>Fall Limited sneakers</p>
-          <p>$${price.toFixed(2)} x ${count} <span><b>${totalAmount.toFixed(
-        2
-      )}</b></span></p>
+          <p>$${price.toFixed(
+            2
+          )} x ${shoesBought} <span><b>${totalAmount.toFixed(2)}</b></span></p>
         </div>
         <div ><img class="delete" src="images/delete.svg" alt=""></div>
       </div>
