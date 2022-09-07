@@ -54,12 +54,14 @@
         <div class="nav--rightcontent">
           <!-- cart item number modal -->
           <div class="itemCartBtn hidden">0</div>
-          <a href="#" class="navcart">
+          <a href="#" class="navcart" aria-label="Cart">
             <img src="images/icon-cart.svg" alt="" />
           </a>
-          <a href="#" class="nav-avatar">
-            <!-- <img src="images/avatar.svg" alt="" /> -->
-          </a>
+          <div class="avatar-contain">
+            <a href="#" class="nav-avatar" aria-label="Avatar">
+              <img src="images/avatar.svg" alt="" />
+            </a>
+          </div>
         </div>
         <!-- cart modal div -->
          <div class="empty--cart cart--modal hidden">
@@ -93,34 +95,49 @@
           </div>
           
           <div class="thumbnail--images">
-            <a href="#" class="">
-              <img
-                class="modal-image active"
-                src="images/image-product-1-thumbnail.jpg"
-                alt=""
-              />
-            </a>
-            <a href="#">
-              <img
-                class="modal-image"
-                src="images/image-product-2-thumbnail.jpg"
-                alt=""
-              />
-            </a>
-            <a href="#">
-              <img
-                class="modal-image"
-                src="images/image-product-3-thumbnail.jpg"
-                alt=""
-              />
-            </a>
-            <a href="#">
-              <img
-                class="modal-image last-image"
-                src="images/image-product-4-thumbnail.jpg"
-                alt=""
-              />
-            </a>
+            <div class="images-modal-content">
+
+              <a href="#" class="">
+                <img
+                  class="modal-image active"
+                  src="images/image-product-1-thumbnail.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <div class="images-modal-content">
+
+              <a href="#">
+                <img
+                  class="modal-image"
+                  src="images/image-product-2-thumbnail.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <div class="images-modal-content">
+
+              <a href="#">
+                <img
+                  class="modal-image"
+                  src="images/image-product-3-thumbnail.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
+
+            <div class="images-modal-content">
+
+              <a href="#">
+                <img
+                  class="modal-image last-image"
+                  src="images/image-product-4-thumbnail.jpg"
+                  alt=""
+                />
+              </a>
+            </div>
           </div>
         </div>
         <div class="rightcontent--desc">

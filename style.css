@@ -79,12 +79,21 @@ img.logo {
   margin-right: 46.18px;
 }
 
-.nav-avatar {
+.avatar-contain {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.avatar-contain .nav-avatar img {
+  width: 100%;
+  height: 100%;
+}
+/* .nav-avatar {
   width: 50px;
   height: 50px;
   background: url('images/avatar.svg');
   border-radius: 50%;
-}
+} */
 
 div.line {
   color: #000;
@@ -110,6 +119,8 @@ div.line {
 
 .thumbnail--images {
   display: flex;
+  align-items: center;
+  justify-content: space-around;
 }
 
 .leftcontent--image .main-image {
@@ -119,17 +130,17 @@ div.line {
   margin-bottom: 32px;
 }
 
-.thumbnail--images a {
+.thumbnail--images .images-modal-content {
   width: 88px;
   height: 88px;
 
   border-radius: 10px;
-  margin-right: 31px;
+  /* margin-right: 31px; */
 }
 
 .modal-image {
-  height: 88px;
-  width: 88px;
+  height: 100%;
+  width: 100%;
   border-radius: 10px;
 }
 
@@ -362,15 +373,24 @@ span.closeModal {
 .menu {
   display: none;
 }
-.nav-avatar:hover {
+/* .nav-avatar:hover {
   border: solid #ff7e1b;
   background-position: center;
+} */
+
+.avatar-contain:hover {
+  border: solid #ff7e1b;
+  transition: ease 0.1ms;
 }
 
-.modal-image:hover {
+.images-modal-content:hover {
   opacity: 0.75;
   border: solid 2px #ff7e1b;
 }
+/* .modal-image:hover {
+  opacity: 0.75;
+  border: solid 2px #ff7e1b;
+} */
 
 .btn--addtocart:hover {
   opacity: 80%;
